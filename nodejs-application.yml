@@ -21,7 +21,6 @@ spec:
         image: "varunpasumarthi/nodejsapp:latest"
         ports:
           - containerPort: 3000
-            
 ---
 apiVersion: v1
 kind: Service
@@ -36,7 +35,7 @@ spec:
   -
     targetPort: 3000
     port: 80
- ---
+---
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
@@ -50,4 +49,5 @@ spec:
       - backend:
           serviceName: nodejs-app
           servicePort: 80
- 
+
+              
