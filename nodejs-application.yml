@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: nodejs-app
-        image: "devopshint/nodejsapp-1.0:latest"
+        image: "varunpasumarthi/nodejsapp"
         ports:
           - containerPort: 3000
 ---
@@ -34,17 +34,5 @@ spec:
   ports:
   - name: http
     targetPort: 3000
----
-apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
-metadata:
-  name: nodejs-ingress
-  namespace: default
-spec:
-  rules:
-  - host: mynodeapp.com
-    http:
-      paths:
-      - backend:
-          serviceName: mynode-app
-          servicePort: 80
+    port: 80
+
