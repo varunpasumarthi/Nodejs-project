@@ -1,5 +1,5 @@
 FROM node:14
-WORKDIR /root/app
+WORKDIR /usr/src/app
 COPY package*.json app.js ./
 RUN npm install
 EXPOSE 3000
