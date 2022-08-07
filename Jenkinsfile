@@ -25,7 +25,7 @@ pipeline
            {
              sh 'docker login -u varunpasumarthi -p ${dockerhubpwd}'
            }
-           sh 'docker push varunpasumarthi/nodejsapp'
+           sh 'docker push varunpasumarthi/nodejsapp:latest'
         }
       }
       stage('Deploying App to Kubernetes') 
